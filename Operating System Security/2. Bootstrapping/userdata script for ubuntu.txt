@@ -1,0 +1,6 @@
+#!/bin/bash
+hostnamectl set-hostname ldap.example.com
+vim /etc/hosts
+apt update
+apt -y install slapd ldap-utils
+apt install python3
