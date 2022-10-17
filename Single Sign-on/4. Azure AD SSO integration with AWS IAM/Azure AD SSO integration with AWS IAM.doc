@@ -1,1 +1,16 @@
 
+AWS IAM Integration with Azure Active Directory
+
+Organizations that operate a multi-account strategy in Amazon Web Services (AWS) with AWS Control Tower 
+or AWS Organizations might have a requirement to use Microsoft Azure Active Directory (Azure AD) single sign-on 
+(SSO) for federation into the AWS Management Console. In these situations, AWS IAM Identity Center 
+(successor to AWS Single Sign-On) might not always fit into an organization’s requirements. When this occurs, 
+federation is achieved by using an enterprise application within Azure AD named AWS Single-Account Access. 
+The application is deployed within Azure AD for each AWS account. 
+
+
+As described in a Microsoft tutorial on integrating Azure AD SSO with AWS, programmatic access to each integrated 
+account must be configured by using an AWS Identity and Access Management (IAM) user in each account. Azure AD uses
+the IAM user to retrieve IAM roles to synchronize with Azure AD. Domain administrators map those synchronized roles 
+to groups of users within Azure AD to enable those users to federate into AWS with the appropriate IAM role. 
+
