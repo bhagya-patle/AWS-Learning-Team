@@ -1,1 +1,8 @@
 
+AWS Single Sign-On Integration with Azure Active Directory
+
+I demonstrated how we can integrate Azure AD to AWS Single Sign-On (SSO). With this connection, 
+you can now manage access to AWS accounts and apps centrally for single sign-on and utilize automated 
+provisioning to decrease complexity when maintaining and utilizing identities. Users no longer need to 
+manage multiple identities and passwords to access their AWS accounts and apps since Azure AD can now 
+serve as a single source for user management.
