@@ -27,11 +27,13 @@ Steps to Setup AWS SSO	5
 Document Name: AWS SSO setup
 Owner: Bhagyashree Patle
 
-Scope
+Scope:
 AWS SSO is where you create, or connect, your workforce identities in AWS once and manage access centrally across   AWS organization. You can choose to manage access just to your AWS accounts or cloud applications. You can create user identities directly in AWS SSO, or you can bring them from your Microsoft Active Directory or a standards-based identity provider, such as Okta Universal Directory or Azure AD. With AWS SSO, you get a unified administration experience to define, customize, and assign fine-grained access.
-Problem Statement
+
+Problem Statement:
 Configure a service where a user authenticates and can access multiple applications without having to log in to those other applications. So that users don’t have to log in to all of the applications they use every day.
-Introduction 
+
+Introduction: 
 AWS SSO is a cloud-based SSO service to easily manage access to all of the accounts configured in your AWS Organization. Using AWS SSO eliminates the need for operating your own SSO infrastructure. It easily manages your AWS Organizations account access, can integrate with many third-party applications, and it provides a Security Assertion Markup Language (SAML) configuration tool to extend AWS SSO to any SAML enabled application.
 1.	What benefits does AWS IAM Identity Center provide?
 Through AWS IAM Identity Center you can connect to your Microsoft Active Directory as a result of that users can sign in to the user portal with their user names and passwords to access the AWS accounts and applications to which you have granted them access. The following screenshot shows an example of the AWS IAM Identity Center user portal.
