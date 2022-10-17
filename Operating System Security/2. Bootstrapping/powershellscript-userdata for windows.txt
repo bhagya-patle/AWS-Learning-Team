@@ -1,0 +1,23 @@
+<powershell>
+Write-Host("Welcome to Bootstrapping!!!")
+
+if(Test-Path -Path "C:\Hemas"){write-host("Folder exists...")}
+else{New-Item -Path "c:\" -Name "Hemas" -ItemType "Directory"}
+
+$awscliurl = "https://s3.amazonaws.com/aws-cli/AWSCLI64PY3.msi"
+$output = "c:\Hemas\AWSCLI64PY3.msi"
+Invoke-WebRequest -Uri $awscliurl -Outfile $output
+
+$pythonurl ="https://www.python.org/ftp/python/3.8.1/python-3.8.1-amd64.exe"
+$output = "c:\Hemas\python-3.8.1-amd64.exe"
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+Invoke-WebRequest -Uri $pythonurl -OutFile $output
+
+New-Item -Path C:\Hemas -Name "hemastext.txt" -ItemType "file" -Value "Welcome to AWS world!!!"
+[string]$installcmd = ""
+$installcmd += "c:\Hemas\python-3.8.1-amd64.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0"
+
+New-Item -Path C:\Hemas -Name "execute.bat" -ItemType "file" -Value $installcmd
+Start-Process "cmd.exe" "/c C:\Hemas\execute.bat"
+Write-Host("Program ended")
+</powershell>
